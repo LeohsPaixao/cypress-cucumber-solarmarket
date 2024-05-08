@@ -1,8 +1,25 @@
 {
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clear": "rimraf cypress/results/screenshots && rimraf cypress/results/videos",
+    "cy:verify": " npx cypress verify",
+    "cy:open": "npm run clear && npx cypress open",
+    "cy:run": "npm run clear && npx cypress run"
+  },
+  "author": "Leonardo Paixão <leonardohspaixao@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "cypress": "^13.8.1"
+    "cypress": "^13.8.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-plugin-xhr-toggle": "^1.2.1",
+    "rimraf": "^5.0.5"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.6.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/"
   }
 }
