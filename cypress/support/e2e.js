@@ -18,3 +18,4 @@
 
 // Alternatively you can use CommonJS syntax:
 require('./commands')
+require('cypress-network-idle')

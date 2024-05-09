@@ -11,15 +11,14 @@
   "author": "Leonardo Paixão <leonardohspaixao@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^13.8.1",
+    "cypress": "^13.9.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-network-idle": "^1.14.2",
     "cypress-plugin-xhr-toggle": "^1.2.1",
     "rimraf": "^5.0.5"
   },
-  "devDependencies": {
-    "@cucumber/cucumber": "^10.6.0"
-  },
   "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
     "step_definitions": "cypress/e2e/"
   }
 }

@@ -41,4 +41,23 @@ Cypress.Commands.add('login', () => {
       cacheAcrossSpecs: true,
     },
   );
+  cy.waitForNetworkIdlePrepare({
+    method: '+(POST|GET)',
+    pattern: '*',
+    alias: 'calls',
+    log: false,
+  });
+});
+
+Cypress.Commands.add('waitRequest', (timing) => {
+  try {
+    cy.waitForNetworkIdle('@calls', '/graphql', timing, { log: false });
+  } catch (error) { return { error }; }
+});
+
+Cypress.Commands.add('visitAndwait', (url, timing) => {
+  cy.visit(url);
+  try {
+    cy.waitForNetworkIdle('@calls', '/graphql', timing, { log: false });
+  } catch (error) { return { error }; }
 });

@@ -2,7 +2,7 @@ const { Given, When, Then, And } = require('cypress-cucumber-preprocessor/steps'
 
 Given('o sistema', () => {
   cy.login();
-  cy.visit('/clientes')
+  cy.visitAndwait('/clientes', 500)
   cy.get('.u-flex > div > .is-primary').should('contain', 'Clientes')
 });
 
@@ -21,7 +21,7 @@ And('digitar o {string} do cliente', (nome) => {
 });
 
 And('clicar no botão Cadastrar', () => {
-  cy.get('[data-test="clientes-button_cadastrar"]').should('be.enabled', { timeout: 15000 }).click();
+  cy.get('[data-test="clientes-button_cadastrar"]').should('be.enabled').click();
 })
 
 Then('deve aparecer uma mensagem de sucesso', () => {
