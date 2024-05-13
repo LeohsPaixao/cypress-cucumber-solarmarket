@@ -9,6 +9,11 @@
     "cy:run": "npm run clear && npx cypress run"
   },
   "author": "Leonardo Paixão <leonardohspaixao@gmail.com>",
+  "contributors": [
+    "Mateus Mello <mateusmello157@gmail.com>",
+    "Adriel Rodrigues <adriel@example.com>",
+    "LeonardoMelloTrindade <leo11madara@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "cypress": "^13.9.0",
