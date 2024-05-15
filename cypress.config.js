@@ -14,8 +14,10 @@ module.exports = defineConfig({
   pageLoadTimeout: 120 * 1000,
 
   e2e: {
-    baseUrl: 'https://e2e.solarmarket.com.br',
-    username: 'guilherme.mello@solarmarket.com.br',
+    // baseUrl: 'https://e2e.solarmarket.com.br',
+    baseUrl: 'https://qa-clean.business.solarmarket.com.br/',
+    // username: 'guilherme.mello@solarmarket.com.br',
+    username: 'leonardomellotrindade+emp@gmail.com',
     password: '123456',
     fixturesFolder: './cypress/fixtures',
     videosFolder: './cypress/results/videos',
