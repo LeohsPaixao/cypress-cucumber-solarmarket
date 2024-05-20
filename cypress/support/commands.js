@@ -47,6 +47,7 @@ Cypress.Commands.add('login', () => {
     alias: 'calls',
     log: false,
   });
+
 });
 
 Cypress.Commands.add('waitRequest', (timing) => {
