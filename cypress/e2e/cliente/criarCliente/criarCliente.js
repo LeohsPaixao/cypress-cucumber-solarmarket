@@ -15,8 +15,10 @@ Given('o modal de cadastro de cliente', () => {
   cy.get('[data-test="modal-content"]').should('be.visible');
 })
 
-When('digitar {string} no campo nome', (nome) => {
-  cy.get('[data-test="clientes-input_nome"]').type(nome);
+When('eu digito o nome do cliente no campo Nome', (dataTable) => {
+  dataTable.raw()[1].forEach(element => {
+    cy.get('[data-test="clientes-input_nome"]').type(element);
+  })
 });
 
 And('clicar no botão Cadastrar', () => {

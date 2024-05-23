@@ -4,10 +4,16 @@ Feature: Criar novo cliente
     Given o sistema
     When eu clicar no botão de Novo cliente
 
-  @Teste01
+@focus   @Teste01
   Scenario: Deve criar um novo cliente somente com o nome
     Given o modal de cadastro de cliente
-    When digitar <name> no campo nome
+    When eu digito o nome do cliente no campo Nome
+      | boardName   |
+      | LeoPaixao   |
+      | PaixaoLeo   |
+      | LPaixao     |
+      | PLeonardo   |
+      | Lpaeoixao   |
     And clicar no botão Cadastrar
     Then deve aparecer uma mensagem de sucesso
 
@@ -41,11 +47,3 @@ Feature: Criar novo cliente
     When digitar <name> no campo nome
     And digitar o "fds@.com" como Email inválido
     Then deve aparecer uma mensagem de erro no campo de Email
-
-  Examples:
-      | name       | cpf      | phone    | cep      |
-      | LeoPaixao  | 55555    | 55555    | 12345678 |
-      | PaixaoLeo  | 66666    | 66666    | 12345679 |
-      | LPaixao    | 77777    | 77777    | 12345600 |
-      | PLeonardo  | 88888    | 88888    | 12345601 |
-      | Lpaeoixao  | 99999    | 99999    | 12345602 |
