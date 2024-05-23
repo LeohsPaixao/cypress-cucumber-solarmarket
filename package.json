@@ -5,7 +5,7 @@
   "scripts": {
     "clear": "rimraf cypress/results/screenshots && rimraf cypress/results/videos",
     "cy:verify": " npx cypress verify",
-    "cy:open": "npm run clear && npx cypress open",
+    "cy:open": "cypress open",
     "cy:run": "npm run clear && npx cypress run"
   },
   "author": "Leonardo Paixão <leonardohspaixao@gmail.com>",
